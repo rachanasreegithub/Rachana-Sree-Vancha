@@ -293,8 +293,16 @@ code {
     letter-spacing: -1px;
     margin-bottom: 10px;
     background: linear-gradient(135deg, #ffffff 0%, var(--text-secondary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
+    /* Standard property */
+    background-clip: text; 
+    /* Vendor prefix for Safari/Chrome */
+    -webkit-background-clip: text; 
+
+    /* Standard fallback using transparent color */
+    color: transparent; 
+    /* Vendor prefix for webkit browsers */
+    -webkit-text-fill-color: transparent; 
 }
 
 .hero-subtitle {
